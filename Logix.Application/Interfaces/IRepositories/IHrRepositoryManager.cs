@@ -1,0 +1,211 @@
+﻿using Logix.Application.Common;
+using Logix.Application.Interfaces.IRepositories.HR;
+
+namespace Logix.Application.Interfaces.IRepositories
+{
+    public interface IHrRepositoryManager
+    {
+        IHrEmployeeRepository HrEmployeeRepository { get; }
+        IHrAbsenceRepository HrAbsenceRepository { get; }
+        IHrVacationsRepository HrVacationsRepository { get; }
+        IHrDelayRepository HrDelayRepository { get; }
+        IHrOverTimeDRepository HrOverTimeDRepository { get; }
+        IHrKpiTemplatesCompetenceRepository HrKpiTemplatesCompetenceRepository { get; }
+        IUnitOfWork UnitOfWork { get; }
+        IHrAttendanceRepository HrAttendanceRepository { get; }
+        IHrAttTimeTableRepository HrAttTimeTableRepository { get; }
+        IHrAttShiftEmployeeRepository HrAttShiftEmployeeRepository { get; }
+        IHrMandateRepository HrMandateRepository { get; }
+        IHrCompetenceRepository HrCompetenceRepository { get; }
+        IHrCompetencesCatagoryRepository HrCompetencesCatagoryRepository { get; }
+        IHrKpiTypeRepository HrKpiTypeRepository { get; }
+        IHrKpiTemplateRepository HrKpiTemplateRepository { get; }
+        IHrEvaluationAnnualIncreaseConfigRepository HrEvaluationAnnualIncreaseConfigRepository { get; }
+        IHrDisciplinaryCaseActionRepository HrDisciplinaryCaseActionRepository { get; }
+        IHrDisciplinaryCaseRepository HrDisciplinaryCaseRepository { get; }
+        IHrDisciplinaryRuleRepository HrDisciplinaryRuleRepository { get; }
+        IHrSettingRepository HrSettingRepository { get; }
+        IHrVacationsCatagoryRepository HrVacationsCatagoryRepository { get; }
+        IHrRateTypeRepository HrRateTypeRepository { get; }
+        IHrVacationsTypeRepository HrVacationsTypeRepository { get; }
+        IHrAllowanceDeductionRepository HrAllowanceDeductionRepository { get; }
+        IHrLoanRepository HrLoanRepository { get; }
+        IHrPayrollDRepository HrPayrollDRepository { get; }
+        IHrArchivesFileRepository HrArchivesFileRepository { get; }
+        IHrLicenseRepository HrLicenseRepository { get; }
+        IHrTransferRepository HrTransferRepository { get; }
+        IHrOverTimeMRepository HrOverTimeMRepository { get; }
+        IHrOhadDetailRepository HrOhadDetailRepository { get; }
+        IHrEmpWarnRepository HrEmpWarnRepository { get; }
+        IHrVacationBalanceRepository HrVacationBalanceRepository { get; }
+        IHrDependentRepository HrDependentRepository { get; }
+        IHrDirectJobRepository HrDirectJobRepository { get; }
+        IHrIncrementRepository HrIncrementRepository { get; }
+        IHrLeaveRepository HrLeaveRepository { get; }
+        IHrKpiRepository HrKpiRepository { get; }
+        IHrKpiDetaileRepository HrKpiDetaileRepository { get; }
+        IHrEmpWorkTimeRepository HrEmpWorkTimeRepository { get; }
+        IHrSalaryGroupRepository HrSalaryGroupRepository { get; }
+        IHrSalaryGroupAccountRepository HrSalaryGroupAccountRepository { get; }
+        IHrSalaryGroupRefranceRepository HrSalaryGroupRefranceRepository { get; }
+        IHrCardTemplateRepository HrCardTemplateRepository { get; }
+        IHrTrainingBagRepository HrTrainingBagRepository { get; }
+        IHrNotificationsTypeRepository HrNotificationsTypeRepository { get; }
+        IHrNotificationsSettingRepository HrNotificationsSettingRepository { get; }
+        IHrPolicyRepository HrPolicyRepository { get; }
+        IHrPoliciesTypeRepository HrPoliciesTypeRepository { get; }
+        IHrAttLocationRepository HrAttLocationRepository { get; }
+        IHrAttTimeTableDayRepository HrAttTimeTableDayRepository { get; }
+        IHrDisciplinaryActionTypeRepository HrDisciplinaryActionTypeRepository { get; }
+        IHrDeductionVwRepository HrDeductionVwRepository { get; }
+        IHrAllowanceVwRepository HrAllowanceVwRepository { get; }
+
+        IHrAllowanceDeductionMRepository HrAllowanceDeductionMRepository { get; }
+        IHrAllowanceDeductionTempOrFixRepository HrAllowanceDeductionTempOrFixRepository { get; }
+        IHrArchiveFilesDetailRepository HrArchiveFilesDetailRepository { get; }
+        IHrAssignmenRepository HrAssignmenRepository { get; }
+        IHrAttActionRepository HrAttActionRepository { get; }
+        IHrAttLocationEmployeeRepository HrAttLocationEmployeeRepository { get; }
+        IHrAttShiftCloseDRepository HrAttShiftCloseDRepository { get; }
+        IHrAttShiftCloseRepository HrAttShiftCloseRepository { get; }
+        IHrAuthorizationRepository HrAuthorizationRepository { get; }
+        IHrAttendanceBioTimeRepository HrAttendanceBioTimeRepository { get; }
+        IHrCheckInOutRepository HrCheckInOutRepository { get; }
+        IHrClearanceRepository HrClearanceRepository { get; }
+        IHrClearanceTypeRepository HrClearanceTypeRepository { get; }
+        IHrCompensatoryVacationRepository HrCompensatoryVacationRepository { get; }
+        IHrContracteRepository HrContracteRepository { get; }
+        IHrClearanceMonthRepository HrClearanceMonthRepository { get; }
+        IHrCostTypeRepository HrCostTypeRepository { get; }
+        IHrCustodyRepository HrCustodyRepository { get; }
+        IHrCustodyItemRepository HrCustodyItemRepository { get; }
+        IHrCustodyItemsPropertyRepository HrCustodyItemsPropertyRepository { get; }
+        IHrCustodyRefranceTypeRepository HrCustodyRefranceTypeRepository { get; }
+        IHrCustodyTypeRepository HrCustodyTypeRepository { get; }
+        IHrDecisionRepository HrDecisionRepository { get; }
+        IHrDecisionsEmployeeRepository HrDecisionsEmployeeRepository { get; }
+        IHrOhadRepository HrOhadRepository { get; }
+        IHrNoteRepository HrNoteRepository { get; }
+        IHrRequestDetaileRepository HrRequestDetaileRepository { get; }
+        IHrRequestRepository HrRequestRepository { get; }
+        IHrRequestTypeRepository HrRequestTypeRepository { get; }
+        IHrIncrementsAllowanceDeductionRepository HrIncrementsAllowanceDeductionRepository { get; }
+        IHrHolidayRepository HrHolidayRepository { get; }
+        IHrPermissionRepository HrPermissionRepository { get; }
+        IHrAttShiftRepository HrAttShiftRepository { get; }
+        IHrAttShiftTimeTableRepository HrAttShiftTimeTableRepository { get; }
+        IHrEmployeeCostRepository HrEmployeeCostRepository { get; }
+        IHrOhadDetailsVwRepository HrOhadDetailsVwRepository { get; }
+
+        IHrInsurancePolicyRepository HrInsurancePolicyRepository { get; }
+        IHrInsuranceRepository HrInsuranceRepository { get; }
+        IHrInsuranceEmpRepository HrInsuranceEmpRepository { get; }
+
+        IHrJobRepository HrJobRepository { get; }
+        IHrJobDescriptionRepository HrJobDescriptionRepository { get; }
+        IHrJobEmployeeVwRepository HrJobEmployeeVwRepository { get; }
+        IHrJobLevelRepository HrJobLevelRepository { get; }
+        IHrRecruitmentApplicationRepository HrRecruitmentApplicationRepository { get; }
+        IHrRecruitmentVacancyRepository HrRecruitmentVacancyRepository { get; }
+        IHrRecruitmentCandidateRepository HrRecruitmentCandidateRepository { get; }
+        IHrJobGradeRepository HrJobGradeRepository { get; }
+        IHrRecruitmentCandidateKpiDRepository HrRecruitmentCandidateKpiDRepository { get; }
+        IHrRecruitmentCandidateKpiRepository HrRecruitmentCandidateKpiRepository { get; }
+        IHrPayrollRepository HrPayrollRepository { get; }
+        IHrTicketRepository HrTicketRepository { get; }
+        IHrVisaRepository HrVisaRepository { get; }
+        IHrFixingEmployeeSalaryRepository HrFixingEmployeeSalaryRepository { get; }
+        IHrLeaveTypeRepository HrLeaveTypeRepository { get; }
+        IHrPayrollAllowanceDeductionRepository HrPayrollAllowanceDeductionRepository { get; }
+
+        IHrLoanInstallmentPaymentRepository HrLoanInstallmentPaymentRepository { get; }
+        IHrLoanInstallmentRepository HrLoanInstallmentRepository { get; }
+        IHrPayrollNoteRepository HrPayrollNoteRepository { get; }
+        IHrDecisionsTypeRepository HrDecisionsTypeRepository { get; }
+        IHrDecisionsTypeEmployeeRepository HrDecisionsTypeEmployeeRepository { get; }
+        IHrNotificationRepository HrNotificationRepository { get; }
+        IHrEmployeeLocationVwRepository HrEmployeeLocationVwRepository { get; }
+        IHrAttShiftEmployeeMVwRepository HrAttShiftEmployeeMVwRepository { get; }
+        IHrAttCheckShiftEmployeeVwRepository HrAttCheckShiftEmployeeVwRepository { get; }
+        IHrOpeningBalanceRepository HrOpeningBalanceRepository { get; }
+        IHrOpeningBalanceTypeRepository HrOpeningBalanceTypeRepository { get; }
+        IHrPayrollAllowanceVwRepository HrPayrollAllowanceVwRepository { get; }
+        IHrPsAllowanceDeductionRepository HrPsAllowanceDeductionRepository { get; }
+        IHrPreparationSalaryRepository HrPreparationSalaryRepository { get; }
+        IHrPayrollDeductionAccountsVwRepository HrPayrollDeductionAccountsVwRepository { get; }
+        IHrPayrollCostcenterRepository HrPayrollCostcenterRepository { get; }
+        IHrPayrollAllowanceAccountsVwRepository HrPayrollAllowanceAccountsVwRepository { get; }
+        IHrNotificationsReplyRepository HrNotificationsReplyRepository { get; }
+        IHrLoanPaymentRepository HrLoanPaymentRepository { get; }
+        IHrPermissionTypeVwRepository HrPermissionTypeVwRepository { get; }
+        IHrPermissionReasonVwRepository HrPermissionReasonVwRepository { get; }
+        IHrEmpStatusHistoryRepository HrEmpStatusHistoryRepository { get; }
+
+
+        IHrLanguageRepository HrLanguageRepository { get; }
+        IHrFileRepository HrFileRepository { get; }
+        IHrSkillRepository HrSkillRepository { get; }
+        IHrEducationRepository HrEducationRepository { get; }
+        IHrWorkExperienceRepository HrWorkExperienceRepository { get; }
+        IHrGosiEmployeeRepository HrGosiEmployeeRepository { get; }
+        IHrGosiRepository HrGosiRepository { get; }
+        IHrGosiEmployeeAccVwRepository HrGosiEmployeeAccVwRepository { get; }
+        IHrVacationsDayTypeRepository HrVacationsDayTypeRepository { get; }
+        IHrIncrementTypeRepository HrIncrementTypeRepository { get; }
+        IHrPerformanceRepository HrPerformanceRepository { get; }
+        IHrKpiTemplatesJobRepository HrKpiTemplatesJobRepository { get; }
+        IHrEmpGoalIndicatorRepository HrEmpGoalIndicatorRepository { get; }
+        IHrEmpGoalIndicatorsCompetenceRepository HrEmpGoalIndicatorsCompetenceRepository { get; }
+        IHrEmpGoalIndicatorsEmployeeRepository HrEmpGoalIndicatorsEmployeeRepository { get; }
+        IHrDefinitionSalaryEmpRepository HrDefinitionSalaryEmpRepository { get; }
+        IHrActualAttendanceRepository HrActualAttendanceRepository { get; }
+        IHrPayrollDeductionVwRepository HrPayrollDeductionVwRepository { get; }
+        IHrGosiTypeVwRepository HrGosiTypeVwRepository { get; }
+        IHrFlexibleWorkingMasterRepository HrFlexibleWorkingMasterRepository { get; }
+        IHrFlexibleWorkingRepository HrFlexibleWorkingRepository { get; }
+        IHrMandateLocationMasterRepository HrMandateLocationMasterRepository { get; }
+        IHrMandateLocationDetaileRepository HrMandateLocationDetaileRepository { get; }
+        IHrMandateRequestsMasterRepository HrMandateRequestsMasterRepository { get; }
+        IHrMandateRequestsDetaileRepository HrMandateRequestsDetaileRepository { get; }
+        IHrExpensesTypeRepository HrExpensesTypeRepository { get; }
+        IHrJobOfferRepository HrJobOfferRepository { get; }
+        IHrExpensesEmployeeRepository HrExpensesEmployeeRepository { get; }
+        IHrExpenseRepository HrExpenseRepository { get; }
+        IHrJobOfferAdvantageRepository HrJobOfferAdvantageRepository { get; }
+        IHrProvisionRepository HrProvisionRepository { get; }
+        IHrProvisionsEmployeeRepository HrProvisionsEmployeeRepository { get; }
+        IHrProvisionsEmployeeAccVwRepository HrProvisionsEmployeeAccVwRepository { get; }
+        IHrTimeZoneRepository HrTimeZoneRepository { get; }
+
+        IHrRequestGoalsEmployeeDetailRepository HrRequestGoalsEmployeeDetailRepository { get; }
+        IHrExpensesPaymentRepository HrExpensesPaymentRepository { get; }
+        IHrExpensesScheduleRepository HrExpensesScheduleRepository { get; }
+        IHrIncomeTaxRepository HrIncomeTaxRepository { get; }
+        IHrIncomeTaxPeriodRepository HrIncomeTaxPeriodRepository { get; }
+        IHrIncomeTaxSlideRepository HrIncomeTaxSlideRepository { get; }
+        IHrPayrollTransactionTypeRepository HrPayrollTransactionTypeRepository { get; }
+        IHrPayrollTransactionTypeValueRepository HrPayrollTransactionTypeValueRepository { get; }
+        IHrStructureRepository HrStructureRepository { get; }
+
+        IHrVisitScheduleLocationRepository HrVisitScheduleLocationRepository { get; }
+        IHrVisitStepRepository HrVisitStepRepository { get; }
+        IHrPsAllowanceVwRepository HrPsAllowanceVwRepository { get; }
+        IHrPsDeductionVwRepository HrPsDeductionVwRepository { get; }
+        IHrJobGroupsRepository HrJobGroupsRepository { get; }
+        IHrJobCategoryRepository HrJobCategoryRepository { get; }
+        IHrJobAllowanceDeductionRepository HrJobAllowanceDeductionRepository { get; }
+        IHrJobLevelsAllowanceDeductionRepository HrJobLevelsAllowanceDeductionRepository { get; }
+        IHrLeaveAllowanceDeductionRepository HrLeaveAllowanceDeductionRepository { get; }
+        IHrProvisionsMedicalInsuranceRepository HrProvisionsMedicalInsuranceRepository { get; }
+        IHrProvisionsMedicalInsuranceEmployeeRepository HrProvisionsMedicalInsuranceEmployeeRepository { get; }
+        IHrProvisionsMedicalInsuranceEmployeeAccVwRepository HrProvisionsMedicalInsuranceEmployeeAccVwRepository { get; }
+
+        IHrInsuranceEmpVwRepository HrInsuranceEmpVwRepository { get; }
+
+        IHrContractsAllowanceDeductionRepository HrContractsAllowanceDeductionRepository { get; }
+        IHrClearanceAllowanceDeductionRepository HrClearanceAllowanceDeductionRepository { get; }
+        IHrContractsAllowanceVwRepository HrContractsAllowanceVwRepository { get; }
+        IHrContractsDeductionVwRepository HrContractsDeductionVwRepository { get; }
+
+    }
+}

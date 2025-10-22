@@ -1,0 +1,181 @@
+﻿@{
+    Layout = null;
+}
+
+@model LoginDto
+
+@inject IDDListHelper listHelper
+@inject IMainServiceManager serviceManager
+
+@{
+    var getFacilities = await serviceManager.SysSystemService.GetFacilities();
+    var facilites = getFacilities.Data.Where(x => x.FlagDelete == false);
+    var ddFacilities = listHelper.GetFromList<long>(facilites.Select(s => new DDListItem<long> { Name = s.FacilityName ?? "", Value = s.FacilityId }), hasDefault: false);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/v2/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/v2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/v2/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/v2/css/owl.theme.default.css">
+    <link rel="stylesheet" href="~/assets/v2/css/fonts.css">
+    <link rel="stylesheet" href="~/assets/v2/css/general.css">
+
+    <link rel="stylesheet" href="~/CustomReport/Css/custom.css"  />
+    <title>login</title>
+</head>
+<body>
+
+
+
+    <div class="container-fluid login">
+        <div class="logo">
+            <img src="~/assets/v2/imgs/logo.png" alt="logo">
+        </div>
+
+
+            <div class="carousel-side">
+
+                <div class="carousel-container">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item"><img src="~/assets/v2/imgs/Component.png" alt=""></div>
+                        <div class="item"><img src="~/assets/v2/imgs/Component.png" alt=""></div>
+                        <div class="item"><img src="~/assets/v2/imgs/Component.png" alt=""></div>
+                        <div class="item"><img src="~/assets/v2/imgs/Component.png" alt=""></div>
+                    </div>
+                    
+                    <span class="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13.318" height="23.003" viewBox="0 0 11.318 20.003">
+                            <path id="Icon_color" data-name="Icon color" d="M.148,1.922a.5.5,0,0,1,0-.71L1.208.152a.48.48,0,0,1,.7,0l9.19,9.19a.75.75,0,0,1,.22.53v.26a.75.75,0,0,1-.22.53l-9.19,9.19a.48.48,0,0,1-.7,0l-1.06-1.06a.5.5,0,0,1,0-.71L8.228,10Z" transform="translate(11.318 20.003) rotate(180)"/>
+                        </svg>                                                    
+                    </span>
+
+                    <span class="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13.318" height="23.003" viewBox="0 0 15.373 27.171">
+                            <path id="Icon_color" data-name="Icon color" d="M.2,2.61a.679.679,0,0,1,0-.964L1.641.206a.652.652,0,0,1,.951,0L15.075,12.689a1.019,1.019,0,0,1,.3.72v.353a1.019,1.019,0,0,1-.3.72L2.592,26.965a.652.652,0,0,1-.951,0L.2,25.525a.679.679,0,0,1,0-.964l7.36-7.36,3.615-3.615Z"/>
+                        </svg>                                                    
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="form-side order-sm-0 order-lg-1">
+
+                <div class="title">
+                    <h3>Sign into your<br>LOGIX ERP</h3>
+                </div>
+
+                <form asp-action="Login" method="post"> 
+                    <h5>sign In</h5> 
+                    <div class="text-danger" asp-validation-summary=All></div>
+                    <div class="inputs">
+                        <div class="input-container">
+                            <span class="text-danger"></span>
+                            <label asp-for="UserName">UserName</label>
+                            <input asp-for="UserName" id="user-name" placeholder="User Name">
+                        </div>
+
+                        <div class="input-container">
+                            <label asp-for="Password">Password</label>
+                            <input asp-for="Password" id="password" placeholder="Cerdentials">
+                            <div class="icon">
+                                <i class="fa-regular fa-eye-slash"></i>                                 
+                            </div>
+
+                        </div>
+
+                        <div class="input-container">
+                            <label for="user-name">company</label>
+                            <!--start dropdown menu-->
+
+                             <span class="text-danger" asp-validation-for="FacilityId"></span>
+                                <div class="controls">
+                                    <select class="span12 with-search" asp-for="FacilityId" asp-items="@ddFacilities">
+                                    </select>
+                                </div>
+                           @* <a href="#" class="dropdown-toggle" role="button" id="dropdown-users" data-bs-toggle="dropdown" aria-expanded="false">
+                                الحلول القياسية لتقنية المعلومات
+                            </a>
+                                
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-users">
+                                <div class="list">
+                                    <li><a class="dropdown-item" href="#">
+                                        <span> الحلول القياسية لتقنية المعلومات :</span>
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <span> الحلول القياسية لتقنية المعلومات :</span>
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <span>نظام لوجيكس لتخطيط الموارد - الجهات الغير ربحية</span>
+                                    </a></li>
+                                </div>
+                            </ul>*@
+                            <!--end dropdown menu-->
+                        </div>
+
+
+                        <div class="input-container">
+                            <label for="user-name">Language</label>
+                            <div class="controls">
+                                    <select class="span12 with-search" asp-for="Language">
+                                        <option value="1">عربي</option>
+                                        <option value="2">انجليزي</option>
+                                    </select>
+                                </div>
+                            <!--start dropdown menu-->
+                           @* <a href="#" class="dropdown-toggle" role="button" id="dropdown-users" data-bs-toggle="dropdown" aria-expanded="false">
+                                Arabic
+                            </a>
+                                
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-users">
+                                <div class="list">
+                                    <li><a class="dropdown-item" href="#">
+                                        <span>Arabic</span>
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <span>English</span>
+                                    </a></li>
+                                </div>
+                            </ul>*@
+                            <!--end dropdown menu-->
+                        </div>
+
+                        <div class="input-container">
+                            <input class="btn" type="submit" value="Sign in">
+                        </div>
+
+                        <div class="remember">
+                            <div class="form-check">
+                                <input asp-for="RememberMe" class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label" asp-for="RememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            
+                            <a href="#" class="forget">Forgot password?</a>
+                        </div>
+
+                        <p class="hint">Your Business Needs. Our Reliable Solutions i.e LOGIX ERP</p>
+
+                        <hr>
+
+                        <p class="hint">All Works Copyright of Respective Owner, Otherwise © LOGIX.</p>
+                    </div>
+                </form>
+
+            </div>
+    </div>
+
+    <script src="~/assets/v2/js/all.min.js"></script>
+    <script src="~/assets/v2/js/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/v2/js/owl.carousel.min.js"></script>
+    <script src="~/assets/v2/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/v2/js/dashboard.js"></script>
+    <script src="~/assets/v2/js/login.js"></script>
+</body>
+</html>

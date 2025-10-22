@@ -1,0 +1,153 @@
+﻿@using Logix.Application.DTOs.RPT
+@inject ILocalizationService localization
+@model RptCustomReportAddDto
+<style>
+	.select2-results__option .wrap:before {
+		font-family: fontAwesome;
+		color: #238caf;
+		content: "\f096";
+		width: 25px;
+		height: 25px;
+		padding-left: 10px;
+	}
+
+	.select2-results__option[aria-selected=true] .wrap:before {
+		content: "\f14a";
+	}
+
+	.select2-results__option .wrap {
+		display: flex;
+	}
+	/* not required css */
+
+	.select2-multiple, .select2-multiple2 {
+		width: 50%
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 38px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 38px;
+	}
+
+	.select2-container .select2-selection--single {
+		height: 38px;
+	}
+</style>
+<script>
+	jQuery(function($) {
+		$.fn.select2.amd.require([
+		'select2/selection/single',
+		'select2/selection/placeholder',
+		'select2/selection/allowClear',
+		'select2/dropdown',
+		'select2/dropdown/search',
+		'select2/dropdown/attachBody',
+		'select2/utils'],
+		function (SingleSelection, Placeholder, AllowClear, Dropdown, DropdownSearch, AttachBody, Utils) {
+			var SelectionAdapter = Utils.Decorate(SingleSelection,Placeholder);
+			SelectionAdapter = Utils.Decorate(SelectionAdapter,AllowClear);
+			var DropdownAdapter = Utils.Decorate(Utils.Decorate(Dropdown,DropdownSearch),AttachBody);
+
+			$('.select2-multiple2').each(function() {
+				var $base_element = $(this); // Reference to the current select element
+				$base_element.select2({
+					placeholder: 'Select multiple items',
+					selectionAdapter: SelectionAdapter,
+					dropdownAdapter: DropdownAdapter,
+					allowClear: true,
+					dropdownAutoClose: false, // Prevents dropdown from closing
+					templateResult: function(data) {
+						if (!data.id) { return data.text; }
+						var $res = $('<div></div>');
+						$res.text(data.text);
+						$res.addClass('wrap');
+						return $res;
+					},
+					templateSelection: function(data) {
+						if (!data.id) { return data.text; }
+						var selected = ($base_element.val() || []).length; // Use the current select element
+						var total = $('option', $base_element).length; // Use the current select element
+						return "Selected " + selected + " of " + total;
+					}
+				});
+			});
+		});
+
+	});
+</script>
+<div dir='@localization.GetMainResource("dir")' class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content" dir='@localization.GetMainResource("dir")'>
+			<form id="addItemForm" method="POST">
+				<div class="modal-header d-flex align-items-center justify-content-between">
+					<h5 class="modal-title" id="examplModalLongTitle">@localization.GetMainResource("SaveTheReport")</h5>
+					<button class="btn fs-5 close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+					<h6 class="d-block" id="HTitleReportMain" style="width: initial;grid-column: span 2;" visible="false">@localization.GetMainResource("TheModificationsCanBeSavedInNewReportOrTheAccessPermission")</h6>
+
+					<div class="input-container">
+						<label for="txtReportName">@localization.GetCommonResource("ar_name")</label>
+						<input id="txtReportName" asp-for="Name" />
+					</div>
+					<div class="input-container">
+						<label for="txtReportName2">@localization.GetCommonResource("en_name")</label>
+						<input id="txtReportName2" asp-for="Name2" />
+					</div>
+
+					<div class="input-container">
+						<label for="DDltype">@localization.GetMainResource("TypeOfSavings")</label>
+						<select id="DDltype" asp-for="DDltype">
+							<option value="1" selected>@localization.GetMainResource("SavePrevious")</option>
+							<option value="2">@localization.GetMainResource("SaveNewDesign")</option>
+						</select>
+					</div>
+					<div class="input-container d-flex flex-row align-items-end">
+						<label for="IsDefault">
+							<input id="IsDefault" type="checkbox" asp-for="IsDefault" />
+							@localization.GetMainResource("DefaultReport")
+						</label>
+					</div>
+
+					<span style="grid-column: span 2; font-size: 20px; font-weight: 600">@localization.GetMainResource("DisplayPermission")</span>
+
+					<div class="input-container">
+						<label for="UsersPermissionEdit">@localization.GetMainResource("Users")</label>
+						<select id="UsersPermissionEdit" asp-for="UsersPermissionEdit" class="select2-multiple2" multiple>
+						</select>
+					</div>
+
+					<div class="input-container">
+						<label for="GoupsPermissionEdit">@localization.GetMainResource("Groups")</label>
+						<select id="GoupsPermissionEdit" asp-for="GoupsPermissionEdit" class="select2-multiple2" multiple>
+						</select>
+					</div>
+
+					<span style="grid-column: span 2; font-size: 20px; font-weight: 600">@localization.GetMainResource("ModificationPermission") </span>
+
+					<div class="input-container">
+						<label for="UsersAccess">@localization.GetMainResource("Users")</label>
+						<select id="UsersAccess" asp-for="UsersAccess" class="select2-multiple2" multiple>
+						</select>
+					</div>
+
+					<div class="input-container">
+						<label for="GoupsAccess">@localization.GetMainResource("Groups")</label>
+						<select id="GoupsAccess" asp-for="GoupsAccess" class="select2-multiple2" multiple>
+						</select>
+					</div>
+
+				</div>
+				<div class="modal-footer d-flex align-items-center justify-content-between">
+					<button type="button" class="btn btn-danger text-white" data-dismiss="modal" tabindex="-1">@localization.GetCommonResource("close")</button>
+					<button id="btnSave" type="button" class="btn btn-primary" TabIndex="-1">@localization.GetCommonResource("save")</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div> @* End modal *@

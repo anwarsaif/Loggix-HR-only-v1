@@ -1,0 +1,7 @@
+﻿@using Logix.Application.Common
+@inject ILocalizationService localization
+@inject ICurrentData session  
+@{
+    ViewData["Title"] = @localization.GetCoreResource("errorPage");
+}
+<h3 class="alert alert-warning text-center">حدثت مشكلة اثناء تنفيذ العملية, يرجى التواصل معنا لحل المشكلة</h3>

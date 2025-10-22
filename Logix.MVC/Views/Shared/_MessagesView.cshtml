@@ -1,0 +1,58 @@
+﻿@inject ILocalizationService localization
+@{
+    string? errorKey = TempData.GetErrorMessage();
+    string? successKey = TempData.GetSuccessMessage();
+    string? infoKey = TempData.GetInfoMessage();
+    string? warningKey = TempData.GetWarningMessage();
+}
+<div class="text-center">
+    @if (!string.IsNullOrEmpty(errorKey))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>@localization.GetMessagesResource(errorKey)</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       @* <div class="alert alert-danger alert-link">@localization.GetMessagesResource(errorKey)</div>*@
+    }
+
+
+
+    @if (!string.IsNullOrEmpty(successKey))
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>@localization.GetMessagesResource(successKey)</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+      @*  <div class="alert alert-success alert-link">@localization.GetMessagesResource(successKey)</div>*@
+    }
+
+    @if (!string.IsNullOrEmpty(infoKey))
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>@localization.GetMessagesResource(infoKey)</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+   @*     <div class="alert alert-info alert-link">@localization.GetMessagesResource(infoKey)</div>*@
+    }
+
+    @if (!string.IsNullOrEmpty(warningKey))
+    {
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@localization.GetMessagesResource(warningKey)</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       @* <div class="alert alert-warning alert-link">@localization.GetMessagesResource(warningKey)</div>*@
+    }
+    
+</div>
+<style>
+    .alert{
+        justify-content: space-between;
+    }
+    .alert-dismissible .btn-close{
+        position: static;
+        padding: 0.5rem;
+    }
+</style>

@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.2.4.0" Ref="0" ControlType="Logix.MVC.Reports.HR.DevReports.RptHrLoan, Logix.MVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Name="Report" Landscape="true" PageWidth="1100" PageHeight="850" Version="22.2" RightToLeft="Yes" RightToLeftLayout="Yes">
+  <Extensions>
+    <Item1 Ref="1" Key="DXXRDVParametersRequestState" Value="Requested" />
+    <Item2 Ref="2" Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item2 Ref="4" ControlType="ReportHeaderBand" Name="ReportHeader">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRPanel" Name="xrPanel1">
+          <Controls>
+            <Item1 Ref="6" ControlType="XRTable" Name="xrTable3" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="7" ControlType="XRTableRow" Name="xrTableRow3">
+                  <Cells>
+                    <Item1 Ref="8" ControlType="XRTableCell" Name="xrTableCell16" Multiline="true" TextAlignment="MiddleCenter" BackColor="WhiteSmoke">
+                      <ExpressionBindings>
+                        <Item1 Ref="9" EventName="BeforePrint" PropertyName="Text" Expression="[BasicData].[ReportNameArabic]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="10" UseBackColor="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+            <Item2 Ref="11" ControlType="XRTable" Name="xrTable5" TextAlignment="MiddleLeft" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="12" ControlType="XRTableRow" Name="xrTableRow6">
+                  <Cells>
+                    <Item1 Ref="13" ControlType="XRTableCell" Name="xrTableCell9" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[BasicData].[CompanyNameArabic]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="15" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="16" ControlType="XRPictureBox" Name="xrPictureBox1" Sizing="ZoomImage" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="17" EventName="BeforePrint" PropertyName="ImageSource" Expression="[BasicData].[CompanyLogo]" />
+                <Item2 Ref="18" EventName="BeforePrint" PropertyName="ImageUrl" Expression="[BasicData].[LogoPrint]" />
+              </ExpressionBindings>
+              <StylePriority Ref="19" UseBorders="false" />
+            </Item3>
+          </Controls>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="20" ControlType="DetailBand" Name="Detail" Expanded="false" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+    <Item4 Ref="21" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="Details">
+      <Bands>
+        <Item1 Ref="22" ControlType="GroupHeaderBand" Name="GroupHeader1">
+          <Controls>
+            <Item1 Ref="23" ControlType="XRTable" Name="xrTable1" TextAlignment="MiddleCenter" BackColor="Gainsboro" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="24" ControlType="XRTableRow" Name="xrTableRow1">
+                  <Cells>
+                    <Item1 Ref="25" ControlType="XRTableCell" Name="xrTableCell8" Multiline="true" />
+                    <Item2 Ref="26" ControlType="XRTableCell" Name="xrTableCell7" Multiline="true" />
+                    <Item3 Ref="27" ControlType="XRTableCell" Name="xrTableCell6" Multiline="true" />
+                    <Item4 Ref="28" ControlType="XRTableCell" Name="xrTableCell5" Multiline="true" />
+                    <Item5 Ref="29" ControlType="XRTableCell" Name="xrTableCell4" Multiline="true" />
+                    <Item6 Ref="30" ControlType="XRTableCell" Name="xrTableCell1" Multiline="true" />
+                    <Item7 Ref="31" ControlType="XRTableCell" Name="xrTableCell2" Multiline="true" />
+                    <Item8 Ref="32" ControlType="XRTableCell" Name="xrTableCell3" Multiline="true" />
+                    <Item9 Ref="33" ControlType="XRTableCell" Name="xrTableCell10" Multiline="true" />
+                    <Item10 Ref="34" ControlType="XRTableCell" Name="xrTableCell11" Multiline="true" />
+                    <Item11 Ref="35" ControlType="XRTableCell" Name="xrTableCell12" Multiline="true" />
+                    <Item12 Ref="36" ControlType="XRTableCell" Name="xrTableCell25" Multiline="true" />
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="37" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="38" ControlType="DetailBand" Name="Detail1">
+          <Controls>
+            <Item1 Ref="39" ControlType="XRTable" Name="xrTable2" TextAlignment="MiddleCenter" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="40" ControlType="XRTableRow" Name="xrTableRow2">
+                  <Cells>
+                    <Item1 Ref="41" ControlType="XRTableCell" Name="xrTableCell13" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="42" EventName="BeforePrint" PropertyName="Text" Expression="[Id]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="43" ControlType="XRTableCell" Name="xrTableCell14" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="[EmpCode]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="45" ControlType="XRTableCell" Name="xrTableCell15" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="46" EventName="BeforePrint" PropertyName="Text" Expression="[EmpName]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="47" ControlType="XRTableCell" Name="xrTableCell17" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[BraName]" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="49" ControlType="XRTableCell" Name="xrTableCell18" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="50" EventName="BeforePrint" PropertyName="Text" Expression="[DepName]" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="51" ControlType="XRTableCell" Name="xrTableCell19" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="[LocationName]" />
+                      </ExpressionBindings>
+                    </Item6>
+                    <Item7 Ref="53" ControlType="XRTableCell" Name="xrTableCell20" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="54" EventName="BeforePrint" PropertyName="Text" Expression="[LoanDate]" />
+                      </ExpressionBindings>
+                    </Item7>
+                    <Item8 Ref="55" ControlType="XRTableCell" Name="xrTableCell21" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="56" EventName="BeforePrint" PropertyName="Text" Expression="[LoanValue]" />
+                      </ExpressionBindings>
+                    </Item8>
+                    <Item9 Ref="57" ControlType="XRTableCell" Name="xrTableCell22" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[InstallmentValue]" />
+                      </ExpressionBindings>
+                    </Item9>
+                    <Item10 Ref="59" ControlType="XRTableCell" Name="xrTableCell23" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="60" EventName="BeforePrint" PropertyName="Text" Expression="[InstallmentCount]" />
+                      </ExpressionBindings>
+                    </Item10>
+                    <Item11 Ref="61" ControlType="XRTableCell" Name="xrTableCell24" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="62" EventName="BeforePrint" PropertyName="Text" Expression="[StartDatePayment]" />
+                      </ExpressionBindings>
+                    </Item11>
+                    <Item12 Ref="63" ControlType="XRTableCell" Name="xrTableCell26" Multiline="true">
+                      <ExpressionBindings>
+                        <Item1 Ref="64" EventName="BeforePrint" PropertyName="Text" Expression="[EndDatePayment]" />
+                      </ExpressionBindings>
+                    </Item12>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="65" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item4>
+    <Item5 Ref="66" ControlType="PageFooterBand" Name="PageFooter">
+      <Controls>
+        <Item1 Ref="67" ControlType="XRTable" Name="xrTable4" TextAlignment="MiddleLeft" BackColor="Gainsboro" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="68" ControlType="XRTableRow" Name="xrTableRow4">
+              <Cells>
+                <Item1 Ref="69" ControlType="XRTableCell" Name="xrTableCell33" Multiline="true" />
+                <Item2 Ref="70" ControlType="XRTableCell" Name="xrTableCell34" Multiline="true">
+                  <ExpressionBindings>
+                    <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[BasicData].[FullName]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="72" ControlType="XRTableCell" Name="xrTableCell35" Multiline="true">
+                  <Controls>
+                    <Item1 Ref="73" ControlType="XRPageInfo" Name="xrPageInfo1" Padding="2,2,0,0,96" />
+                  </Controls>
+                </Item3>
+                <Item4 Ref="74" ControlType="XRTableCell" Name="xrTableCell36" Multiline="true" />
+                <Item5 Ref="75" ControlType="XRTableCell" Name="xrTableCell37" Multiline="true">
+                  <ExpressionBindings>
+                    <Item1 Ref="76" EventName="BeforePrint" PropertyName="Text" Expression="UtcNow()" />
+                  </ExpressionBindings>
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="77" UseBackColor="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 Ref="78" ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" />
+  </Bands>
+  <ExportOptions Ref="79">
+    <PrintPreview Ref="80" DefaultFileName="تقرير بالسلف" />
+  </ExportOptions>
+  <LocalizationItems>
+    <Item1 Ref="81" Component="#Ref-38" Culture="Default" Path="HeightF" Data="25" />
+    <Item2 Ref="82" Component="#Ref-22" Culture="Default" Path="HeightF" Data="57.5" />
+    <Item3 Ref="83" Component="#Ref-66" Culture="Default" Path="HeightF" Data="50" />
+    <Item4 Ref="84" Component="#Ref-0" Culture="Default" Path="Margins" Data="0, 1, 20, 100" />
+    <Item5 Ref="85" Component="#Ref-3" Culture="Default" Path="HeightF" Data="20" />
+    <Item6 Ref="86" Component="#Ref-73" Culture="Default" Path="LocationFloat" Data="58.5,0" />
+    <Item7 Ref="87" Component="#Ref-73" Culture="Default" Path="SizeF" Data="100,30.83335" />
+    <Item8 Ref="88" Component="#Ref-5" Culture="Default" Path="SizeF" Data="1080,100" />
+    <Item9 Ref="89" Component="#Ref-16" Culture="Default" Path="LocationFloat" Data="711.8333,10" />
+    <Item10 Ref="90" Component="#Ref-16" Culture="Default" Path="SizeF" Data="358.1667,85" />
+    <Item11 Ref="91" Component="#Ref-23" Culture="Default" Path="LocationFloat" Data="0,32.5" />
+    <Item12 Ref="92" Component="#Ref-23" Culture="Default" Path="SizeF" Data="1099,25" />
+    <Item13 Ref="93" Component="#Ref-39" Culture="Default" Path="SizeF" Data="1099,25" />
+    <Item14 Ref="94" Component="#Ref-6" Culture="Default" Path="LocationFloat" Data="423.3335,39.16667" />
+    <Item15 Ref="95" Component="#Ref-6" Culture="Default" Path="SizeF" Data="211.6667,40" />
+    <Item16 Ref="96" Component="#Ref-67" Culture="Default" Path="LocationFloat" Data="0,19.16667" />
+    <Item17 Ref="97" Component="#Ref-67" Culture="Default" Path="SizeF" Data="1099,30.83333" />
+    <Item18 Ref="98" Component="#Ref-11" Culture="Default" Path="LocationFloat" Data="9.166648,10" />
+    <Item19 Ref="99" Component="#Ref-11" Culture="Default" Path="SizeF" Data="340.8333,42.5" />
+    <Item20 Ref="100" Component="#Ref-30" Culture="Default" Path="Text" Data="الموقع/المشروع" />
+    <Item21 Ref="101" Component="#Ref-30" Culture="Default" Path="Weight" Data="1" />
+    <Item22 Ref="102" Component="#Ref-33" Culture="Default" Path="Text" Data="القسط" />
+    <Item23 Ref="103" Component="#Ref-33" Culture="Default" Path="Weight" Data="0.7725205286944097" />
+    <Item24 Ref="104" Component="#Ref-34" Culture="Default" Path="Text" Data="الاشهر" />
+    <Item25 Ref="105" Component="#Ref-34" Culture="Default" Path="Weight" Data="0.6633314387813495" />
+    <Item26 Ref="106" Component="#Ref-35" Culture="Default" Path="Text" Data="تاريخ البداية" />
+    <Item27 Ref="107" Component="#Ref-35" Culture="Default" Path="Weight" Data="1.2001808451131002" />
+    <Item28 Ref="108" Component="#Ref-41" Culture="Default" Path="Text" Data="xrTableCell8" />
+    <Item29 Ref="109" Component="#Ref-41" Culture="Default" Path="Weight" Data="0.5541400996200381" />
+    <Item30 Ref="110" Component="#Ref-43" Culture="Default" Path="Text" Data="xrTableCell7" />
+    <Item31 Ref="111" Component="#Ref-43" Culture="Default" Path="Weight" Data="0.799817988610029" />
+    <Item32 Ref="112" Component="#Ref-45" Culture="Default" Path="Text" Data="xrTableCell6" />
+    <Item33 Ref="113" Component="#Ref-45" Culture="Default" Path="Weight" Data="1.646041911769933" />
+    <Item34 Ref="114" Component="#Ref-8" Culture="Default" Path="Text" Data="xrTableCell14" />
+    <Item35 Ref="115" Component="#Ref-8" Culture="Default" Path="Weight" Data="1" />
+    <Item36 Ref="116" Component="#Ref-47" Culture="Default" Path="Text" Data="xrTableCell5" />
+    <Item37 Ref="117" Component="#Ref-47" Culture="Default" Path="Weight" Data="1" />
+    <Item38 Ref="118" Component="#Ref-49" Culture="Default" Path="Text" Data="xrTableCell4" />
+    <Item39 Ref="119" Component="#Ref-49" Culture="Default" Path="Weight" Data="1" />
+    <Item40 Ref="120" Component="#Ref-51" Culture="Default" Path="Text" Data="xrTableCell1" />
+    <Item41 Ref="121" Component="#Ref-51" Culture="Default" Path="Weight" Data="1" />
+    <Item42 Ref="122" Component="#Ref-31" Culture="Default" Path="Text" Data="تاريخ السلفة" />
+    <Item43 Ref="123" Component="#Ref-31" Culture="Default" Path="Weight" Data="1.2547765979992465" />
+    <Item44 Ref="124" Component="#Ref-53" Culture="Default" Path="Text" Data="xrTableCell2" />
+    <Item45 Ref="125" Component="#Ref-53" Culture="Default" Path="Weight" Data="1.2547765979992465" />
+    <Item46 Ref="126" Component="#Ref-55" Culture="Default" Path="Text" Data="xrTableCell3" />
+    <Item47 Ref="127" Component="#Ref-55" Culture="Default" Path="Weight" Data="0.9727028733063439" />
+    <Item48 Ref="128" Component="#Ref-57" Culture="Default" Path="Text" Data="xrTableCell10" />
+    <Item49 Ref="129" Component="#Ref-57" Culture="Default" Path="Weight" Data="0.7725205286944097" />
+    <Item50 Ref="130" Component="#Ref-59" Culture="Default" Path="Text" Data="xrTableCell11" />
+    <Item51 Ref="131" Component="#Ref-59" Culture="Default" Path="Weight" Data="0.6633327716692021" />
+    <Item52 Ref="132" Component="#Ref-61" Culture="Default" Path="Text" Data="xrTableCell12" />
+    <Item53 Ref="133" Component="#Ref-61" Culture="Default" Path="Weight" Data="1.2001795122252474" />
+    <Item54 Ref="134" Component="#Ref-36" Culture="Default" Path="Text" Data="تاريخ النهاية" />
+    <Item55 Ref="135" Component="#Ref-36" Culture="Default" Path="Weight" Data="1.1364877161055504" />
+    <Item56 Ref="136" Component="#Ref-63" Culture="Default" Path="Text" Data="xrTableCell26" />
+    <Item57 Ref="137" Component="#Ref-63" Culture="Default" Path="Weight" Data="1.1364877161055504" />
+    <Item58 Ref="138" Component="#Ref-32" Culture="Default" Path="Text" Data="المبلغ" />
+    <Item59 Ref="139" Component="#Ref-32" Culture="Default" Path="Weight" Data="0.9727028733063439" />
+    <Item60 Ref="140" Component="#Ref-69" Culture="Default" Path="Text" Data="تم الانشاء بواسطة  :" />
+    <Item61 Ref="141" Component="#Ref-69" Culture="Default" Path="Weight" Data="1" />
+    <Item62 Ref="142" Component="#Ref-70" Culture="Default" Path="Text" Data="xrTableCell22" />
+    <Item63 Ref="143" Component="#Ref-70" Culture="Default" Path="Weight" Data="1" />
+    <Item64 Ref="144" Component="#Ref-72" Culture="Default" Path="Weight" Data="1" />
+    <Item65 Ref="145" Component="#Ref-74" Culture="Default" Path="Text" Data="تم الانشاء في :" />
+    <Item66 Ref="146" Component="#Ref-74" Culture="Default" Path="Weight" Data="1" />
+    <Item67 Ref="147" Component="#Ref-75" Culture="Default" Path="Text" Data="xrTableCell21" />
+    <Item68 Ref="148" Component="#Ref-75" Culture="Default" Path="Weight" Data="1" />
+    <Item69 Ref="149" Component="#Ref-29" Culture="Default" Path="Text" Data="الادارة/القسم" />
+    <Item70 Ref="150" Component="#Ref-29" Culture="Default" Path="Weight" Data="1" />
+    <Item71 Ref="151" Component="#Ref-28" Culture="Default" Path="Text" Data="الفرع" />
+    <Item72 Ref="152" Component="#Ref-28" Culture="Default" Path="Weight" Data="1" />
+    <Item73 Ref="153" Component="#Ref-27" Culture="Default" Path="Text" Data="اسم الموظف" />
+    <Item74 Ref="154" Component="#Ref-27" Culture="Default" Path="Weight" Data="1.6460421616864054" />
+    <Item75 Ref="155" Component="#Ref-26" Culture="Default" Path="Text" Data="رقم الموظف" />
+    <Item76 Ref="156" Component="#Ref-26" Culture="Default" Path="Weight" Data="0.7998176970408114" />
+    <Item77 Ref="157" Component="#Ref-25" Culture="Default" Path="Text" Data="الرقم" />
+    <Item78 Ref="158" Component="#Ref-25" Culture="Default" Path="Weight" Data="0.5541401412727834" />
+    <Item79 Ref="159" Component="#Ref-13" Culture="Default" Path="Text" Data="xrTableCell2" />
+    <Item80 Ref="160" Component="#Ref-13" Culture="Default" Path="Weight" Data="3.4083334350585934" />
+    <Item81 Ref="161" Component="#Ref-24" Culture="Default" Path="Weight" Data="1" />
+    <Item82 Ref="162" Component="#Ref-40" Culture="Default" Path="Weight" Data="1" />
+    <Item83 Ref="163" Component="#Ref-7" Culture="Default" Path="Weight" Data="1" />
+    <Item84 Ref="164" Component="#Ref-68" Culture="Default" Path="Weight" Data="1" />
+    <Item85 Ref="165" Component="#Ref-12" Culture="Default" Path="Weight" Data="1" />
+    <Item86 Ref="166" Component="#Ref-0" Culture="Default" Path="DisplayName" Data="{&quot;Name&quot;:&quot;تقرير السلفtttttttttttt&quot;,&quot;Name2&quot;:&quot;Loans Report&quot;,&quot;IsDefault&quot;:true,&quot;UsersPermissionEdit&quot;:[&quot;1&quot;,&quot;2&quot;],&quot;GoupsPermissionEdit&quot;:[&quot;1&quot;,&quot;2&quot;],&quot;UsersAccess&quot;:[&quot;1&quot;,&quot;2&quot;],&quot;GoupsAccess&quot;:[&quot;1&quot;,&quot;2&quot;],&quot;DDltype&quot;:2}" />
+    <Item87 Ref="167" Component="#Ref-21" Culture="Default" Path="HeightF" Data="82.5" />
+    <Item88 Ref="168" Component="#Ref-38" Culture="en" Path="HeightF" Data="41.66667" />
+    <Item89 Ref="169" Component="#Ref-22" Culture="en" Path="HeightF" Data="72.5" />
+    <Item90 Ref="170" Component="#Ref-23" Culture="en" Path="SizeF" Data="1099,40" />
+    <Item91 Ref="171" Component="#Ref-39" Culture="en" Path="SizeF" Data="1099,41.66667" />
+    <Item92 Ref="172" Component="#Ref-30" Culture="en" Path="Text" Data="Location/Project" />
+    <Item93 Ref="173" Component="#Ref-33" Culture="en" Path="Text" Data="The installment" />
+    <Item94 Ref="174" Component="#Ref-34" Culture="en" Path="Text" Data="Months" />
+    <Item95 Ref="175" Component="#Ref-35" Culture="en" Path="Text" Data="Start Date " />
+    <Item96 Ref="176" Component="#Ref-31" Culture="en" Path="Text" Data="Loan Date" />
+    <Item97 Ref="177" Component="#Ref-36" Culture="en" Path="Text" Data="End Date" />
+    <Item98 Ref="178" Component="#Ref-32" Culture="en" Path="Text" Data="The amount" />
+    <Item99 Ref="179" Component="#Ref-69" Culture="en" Path="Text" Data="Created By :" />
+    <Item100 Ref="180" Component="#Ref-74" Culture="en" Path="Text" Data="Created On :" />
+    <Item101 Ref="181" Component="#Ref-29" Culture="en" Path="Text" Data="Department/Section" />
+    <Item102 Ref="182" Component="#Ref-28" Culture="en" Path="Text" Data="Branch" />
+    <Item103 Ref="183" Component="#Ref-27" Culture="en" Path="Text" Data="Employee Name" />
+    <Item104 Ref="184" Component="#Ref-26" Culture="en" Path="Text" Data="Employee Code" />
+    <Item105 Ref="185" Component="#Ref-25" Culture="en" Path="Text" Data="No" />
+  </LocalizationItems>
+  <ComponentStorage>
+    <Item1 Ref="186" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v22.2" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiPjxEYXRhU291cmNlIFR5cGU9IkxvZ2l4Lk1WQy5SZXBvcnRzLkhSLlZpZXdNb2RlbHMuSHJMb2FuRFMsIExvZ2l4Lk1WQywgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>
